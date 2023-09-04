@@ -19,6 +19,17 @@
     grid-template-columns: 1fr;
 }
 
+.header-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
 .content {
     display: grid;
     grid-template-columns: 3fr 1fr;
