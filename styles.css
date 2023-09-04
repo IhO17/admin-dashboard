@@ -190,7 +190,7 @@ button:hover {
     grid-column: 1 / 2;
     display: grid;
     grid-template-columns: repeat(2, 420px);
-    grid-template-rows: repeat(3, 180px);
+    grid-template-rows: repeat(3, 230px);
     gap: 30px;
 }
 
@@ -200,11 +200,11 @@ button:hover {
     box-shadow: 3px 3px 3px;
     display: grid;
     grid-template-columns: 10px 360px;
-    grid-template-rows: 60px 120px;
+    grid-template-rows: 60px 120px 50px;
 }
 
 .project-bar {
-    background-color: rgb(221, 248, 43);
+    background-color: #ddf82b;
     grid-area: 1 / 1 / -1 / 2;
     border-radius: 10px 0 0 10px;
 }
@@ -220,6 +220,14 @@ button:hover {
 .project p {
     grid-column: 2 / 3;
     padding-left: 30px;
+}
+
+.project-icon {
+    display: flex;
+    gap: 10px;
+    color: #3a3a3a;
+    grid-column: 2 / 3;
+    justify-self: end;
 }
 
 .project:hover {
@@ -320,6 +328,11 @@ button:hover {
 .icon-header {
     width: 30px;
     height: 30px;
+}
+
+.icon-header:hover {
+    filter: invert(57%) sepia(98%) saturate(2480%) hue-rotate(166deg) brightness(93%) contrast(96%);
+    cursor: pointer;
 }
 
 
