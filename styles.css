@@ -1,5 +1,4 @@
 * {
-    
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -62,7 +61,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .header {
-    padding: 20px 0 30px 0;
+    padding: 20px 0 10px 0;
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1fr;
@@ -100,14 +99,15 @@ a, a:visited, a:hover, a:active {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    background-color: rgba(255, 255, 0, 0.531);
+    background-color: rgba(190, 190, 42, 0.644);
+    box-shadow: 1px 1px;
 }
 
 .pic {
     height: 70px;
     width: auto;
     padding-top: 5px;
-    background-color: rgba(255, 255, 0, 0.531);
+    background-color: rgba(190, 190, 42, 0.644);
 }
 
 .nav {
@@ -125,7 +125,8 @@ a, a:visited, a:hover, a:active {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    background-color: rgba(255, 255, 0, 0.531);
+    background-color: rgba(190, 190, 42, 0.644);
+    box-shadow: 3px 3px;
 }
 
 .pic-main {
@@ -151,7 +152,7 @@ a, a:visited, a:hover, a:active {
     align-items: center;
     gap: 50px;
     margin-left: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 button {
@@ -160,8 +161,8 @@ button {
     border-radius: 40px;
     background-color: #0ea5e9;
     color: aliceblue;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 button:hover {
@@ -173,23 +174,141 @@ button:hover {
 
 .content {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 9fr 6fr 0.2fr;
+    grid-template-rows: 1fr 5fr 1fr 5fr;
+    background-color: rgb(160, 255, 255);
+    padding-left: 40px;
+}
+
+.project-header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 .projects {
-    grid-row: 1 / 3;
+    grid-row: 2 / -1;
+    grid-column: 1 / 2;
     display: grid;
-    grid-template-columns: repeat(autofit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 420px);
+    grid-template-rows: repeat(3, 180px);
+    gap: 30px;
+}
+
+.project {
+    background-color: rgba(234, 252, 255, 0.564);
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+    display: grid;
+    grid-template-columns: 10px 360px;
+    grid-template-rows: 60px 120px;
+}
+
+.project-bar {
+    background-color: rgb(221, 248, 43);
+    grid-area: 1 / 1 / -1 / 2;
+    border-radius: 10px 0 0 10px;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 20px 0 15px 0;
+    grid-column: 2 / 3;
+    padding-left: 30px;
+}
+
+.project p {
+    grid-column: 2 / 3;
+    padding-left: 30px;
+}
+
+.project:hover {
+    background-color: rgba(197, 202, 203, 0.564);
+    cursor: pointer;
+}
+
+.announcements-title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-left: 30px;
+    grid-column: 1fr;
+    gap: 30px;
 }
 
 .announcements {
+    
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    border-radius: 10px;
+    margin: 0 80px 10px 30px;
+    background-color: rgba(234, 252, 255, 0.564);
+    box-shadow: 3px 3px 3px;
+    padding-top: 20px;
     display: grid;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 5px 120px 5px 120px 10px;
+}
+
+.announcement-bar {
+    background-color: rgba(97, 97, 97, 0.446);
+    margin: 0 20px 0 20px;
+}
+
+.announcement {
+    padding: 0 20px 30px 20px;
+}
+
+.announcement-header {
+    padding-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.trending-title {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .trending {
     display: grid;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    margin: 0 80px 20px 30px;
+    background-color: #eafcff90;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px;
+
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 30px 250px;
+    gap: 50px;
+    justify-self: center;
+    align-self: center;
+    margin-left: 30px;
+}
+
+.trending-top {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.trending-bot {
+    font-size: 1.3rem;
+    color: #0000008a;
+}
+
+.project-header,
+.announcements-title,
+.trending-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+    align-self: center;
 }
 
 .icon {
